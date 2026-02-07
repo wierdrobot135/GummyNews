@@ -14,7 +14,13 @@ export default function NavBar() {
       <Toolbar className="flex justify-between">
         <Typography
           variant="h5"
-          sx={{ fontWeight: "bold", color: "#7B3F00" }}
+          sx={{
+  backdropFilter: "blur(20px)",
+  WebkitBackdropFilter: "blur(20px)",
+  background: "rgba(255,255,255,0.3)",
+  borderBottom: "1px solid rgba(255,255,255,0.5)",
+}}
+
         >
           🍫 Gummy News
         </Typography>
