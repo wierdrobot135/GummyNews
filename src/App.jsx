@@ -1,34 +1,32 @@
-import { Button, Card, CardContent, Typography } from "@mui/material";
+import NavBar from "./components/NavBar";
+import EpisodeCard from "./components/EpisodeCard";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-ember">
-      <Card className="backdrop-blur-xl bg-white/40 shadow-xl rounded-3xl p-8">
-        <CardContent>
-          <Typography
-            variant="h3"
-            gutterBottom
-            sx={{ color: "#7B3F00", fontWeight: "bold" }}
-          >
-            🍫 Gummy News
-          </Typography>
+    <div className="min-h-screen bg-ember">
+      <NavBar />
 
-          <Typography variant="body1" className="mb-6">
-            Broadcasting the most important weird news on Earth.
-          </Typography>
+      <div className="p-8">
+        <h1 className="text-4xl font-bold mb-8 text-center text-[#7B3F00]">
+          Latest Episodes
+        </h1>
 
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#7FD8DE",
-              color: "#000",
-              borderRadius: "12px",
-            }}
-          >
-            Watch Latest Episode
-          </Button>
-        </CardContent>
-      </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <EpisodeCard
+            title="Rotten Banana Politics"
+            video="/videos/banana.mp4"
+          />
+          <EpisodeCard
+            title="Gummy Bear Space Program"
+            video="/videos/space.mp4"
+          />
+          <EpisodeCard
+            title="Emergency Marshmallow Alert"
+            video="/videos/marshmallow.mp4"
+          />
+        </div>
+      </div>
     </div>
   );
 }
+
